@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: priority
+Bundle-SymbolicName: priority; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: PTNetModel,
+ org.aspectj.runtime
+Export-Package: priority.aspect;aspects="profile"
+Import-Package: org.modelversioning.emfprofile,
+ org.modelversioning.emfprofile.application.registry,
+ org.modelversioning.emfprofile.application.registry.ui.observer,
+ org.modelversioning.emfprofileapplication
+Eclipse-SupplementBundle: PTNetModel

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emfprofile="http://www.modelversioning.org/emfprofile/1.1" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <emfprofile:Profile xmi:id="_AO0uUKYFEeaUwtDO0FOpNw" name="priority" nsURI="http://test/petrinet/prior" nsPrefix="myprofile">
+    <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_DKRLwKYFEeaUwtDO0FOpNw" name="Priority">
+      <eSuperTypes xmi:type="ecore:EClass" href="http://www.modelversioning.org/emfprofile/application/1.1#//StereotypeApplication"/>
+      <eOperations xmi:type="emfprofile:Operation" xmi:id="_P4EUEKYFEeaUwtDO0FOpNw" name="isEnabled" body="&#x9;&#x9;&#x9;if (eObject.eContainer() instanceof PetriNet) { &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;int priorityA = (int) stereotypeApplication.eGet(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;stereotypeApplication.getStereotype().getTaggedValue(&quot;priority&quot;));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;for (Node node : ((PetriNet) eObject.eContainer()).getNodes()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(node instanceof Transition) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;StereotypeApplication sACompare = ProfileApplicationRegistry.INSTANCE.getStereotypeApplication(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modelId, node, stereotypeID);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;int priorityB = sACompare == null ? 0 : (int) sACompare.eGet(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sACompare.getStereotype().getTaggedValue(&quot;priority&quot;));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if(priorityB > priorityA &amp;&amp; ((Transition)node).isEnabled()){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return false;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return proceed(eObject);">
+        <joinpoint xmi:type="ecore:EOperation" href="http://test/petrinet#//Transition/isEnabled"/>
+      </eOperations>
+      <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ISlJYKYFEeaUwtDO0FOpNw" name="priority" defaultValueLiteral="0">
+        <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+      <extensions xmi:type="emfprofile:Extension" xmi:id="_GOFiEKYFEeaUwtDO0FOpNw" constraints="out->forAll(target.oclAsType(Place).capacity >= weight or target.oclAsType(Place).capacity &lt; 0)" upperBound="1">
+        <target xmi:type="ecore:EClass" href="http://test/petrinet#//Transition"/>
+      </extensions>
+    </eClassifiers>
+  </emfprofile:Profile>
+  <notation:Diagram xmi:id="_APDX0KYFEeaUwtDO0FOpNw" type="EMFProfile" element="_AO0uUKYFEeaUwtDO0FOpNw" name="profile.emfprofile_diagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_CfzScKYFEeaUwtDO0FOpNw" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Cf1Hp6YFEeaUwtDO0FOpNw" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Cf1HqKYFEeaUwtDO0FOpNw" key="modelID" value="EMFProfile"/>
+      </eAnnotations>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Cf1HoKYFEeaUwtDO0FOpNw" type="5002"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Cf1HoaYFEeaUwtDO0FOpNw" type="7004">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_Cf1HoqYFEeaUwtDO0FOpNw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_Cf1Ho6YFEeaUwtDO0FOpNw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Cf1HpKYFEeaUwtDO0FOpNw" type="7005">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_Cf1HpaYFEeaUwtDO0FOpNw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_Cf1HpqYFEeaUwtDO0FOpNw"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_CfzScaYFEeaUwtDO0FOpNw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_CfzScqYFEeaUwtDO0FOpNw" fontName="Segoe UI"/>
+      <element xmi:type="ecore:EClass" href="http://test/petrinet#//Transition"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CfzSc6YFEeaUwtDO0FOpNw" x="170" y="80"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_DKRy0KYFEeaUwtDO0FOpNw" type="2006" element="_DKRLwKYFEeaUwtDO0FOpNw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_DKSZ4KYFEeaUwtDO0FOpNw" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_DKSZ4aYFEeaUwtDO0FOpNw" type="7008">
+        <children xmi:type="notation:Node" xmi:id="_ISnloKYFEeaUwtDO0FOpNw" type="3001" element="_ISlJYKYFEeaUwtDO0FOpNw">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ISnloaYFEeaUwtDO0FOpNw"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_DKSZ4qYFEeaUwtDO0FOpNw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_DKSZ46YFEeaUwtDO0FOpNw"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_DKSZ5KYFEeaUwtDO0FOpNw" type="7009">
+        <children xmi:type="notation:Node" xmi:id="_P4GwUKYFEeaUwtDO0FOpNw" type="3007" element="_P4EUEKYFEeaUwtDO0FOpNw">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_P4GwUaYFEeaUwtDO0FOpNw"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_DKSZ5aYFEeaUwtDO0FOpNw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_DKSZ5qYFEeaUwtDO0FOpNw"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_DKRy0aYFEeaUwtDO0FOpNw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_DKRy0qYFEeaUwtDO0FOpNw" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DKRy06YFEeaUwtDO0FOpNw" x="350" y="71"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_APDX0aYFEeaUwtDO0FOpNw"/>
+    <edges xmi:type="notation:Edge" xmi:id="_GOH-UKYFEeaUwtDO0FOpNw" type="4005" element="_GOFiEKYFEeaUwtDO0FOpNw" source="_DKRy0KYFEeaUwtDO0FOpNw" target="_CfzScKYFEeaUwtDO0FOpNw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_GOIlYKYFEeaUwtDO0FOpNw" type="6004">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GOIlYaYFEeaUwtDO0FOpNw" x="-7" y="13"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_GOH-UaYFEeaUwtDO0FOpNw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_GOH-UqYFEeaUwtDO0FOpNw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GOH-U6YFEeaUwtDO0FOpNw" points="[-44, -10, 331, 68]$[-379, -98, -4, -20]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

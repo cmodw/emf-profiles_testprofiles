@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emfprofile="http://www.modelversioning.org/emfprofile/1.1" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <emfprofile:Profile xmi:id="_ezo8cKkvEeaDh53Sc91NpA" name="time" nsURI="http://test/petrinet/time" nsPrefix="myprofile">
+    <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_hULmkKkvEeaDh53Sc91NpA" name="time">
+      <eSuperTypes xmi:type="ecore:EClass" href="http://www.modelversioning.org/emfprofile/application/1.1#//StereotypeApplication"/>
+      <eOperations xmi:type="emfprofile:Operation" xmi:id="_83Eh8Kl-Eeaxjr3pdRtTUQ" name="fire" body="&#x9;&#x9;&#x9;int interval = (int) stereotypeApplication.eGet(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;stereotypeApplication.getStereotype().getTaggedValue(&quot;interval&quot;));&#xD;&#xA;&#x9;&#x9;&#x9;Date lastFire = (Date) stereotypeApplication.eGet(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;stereotypeApplication.getStereotype().getTaggedValue(&quot;lastFire&quot;));&#xD;&#xA;&#x9;&#x9;&#x9;long ms = interval * 1000 + lastFire.getTime();&#xD;&#xA;&#x9;&#x9;&#x9;if(ms > System.currentTimeMillis())&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return;&#xD;&#xA;&#x9;&#x9;&#x9;if(eObject.isEnabled())&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;new FireTransitionCommand(eObject);&#xD;&#xA;&#x9;&#x9;&#x9;stereotypeApplication.eSet(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;stereotypeApplication.getStereotype().getTaggedValue(&quot;lastFire&quot;), new Date(System.currentTimeMillis()));">
+        <joinpoint xmi:type="ecore:EOperation" href="http://test/petrinet#//Transition/fire"/>
+      </eOperations>
+      <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_i7zEoKkvEeaDh53Sc91NpA" name="interval" defaultValueLiteral="0">
+        <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_plTvQKkvEeaxjr3pdRtTUQ" name="lastFire" defaultValueLiteral="2016-01-01'T'00:00:00">
+        <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eStructuralFeatures>
+      <extensions xmi:type="emfprofile:Extension" xmi:id="_iLH1oKkvEeaDh53Sc91NpA" constraints="out->forAll(target.oclAsType(Place).capacity >= weight or target.oclAsType(Place).capacity &lt; 0)" upperBound="1">
+        <target xmi:type="ecore:EClass" href="http://test/petrinet#//Transition"/>
+      </extensions>
+    </eClassifiers>
+  </emfprofile:Profile>
+  <notation:Diagram xmi:id="_ezo8cakvEeaDh53Sc91NpA" type="EMFProfile" element="_ezo8cKkvEeaDh53Sc91NpA" name="profile.emfprofile_diagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_gkyJ8KkvEeaDh53Sc91NpA" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gkz_IKkvEeaDh53Sc91NpA" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gkz_IakvEeaDh53Sc91NpA" key="modelID" value="EMFProfile"/>
+      </eAnnotations>
+      <children xmi:type="notation:DecorationNode" xmi:id="_gkzYEKkvEeaDh53Sc91NpA" type="5002"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_gkzYEakvEeaDh53Sc91NpA" type="7004">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_gkzYEqkvEeaDh53Sc91NpA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_gkzYE6kvEeaDh53Sc91NpA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_gkzYFKkvEeaDh53Sc91NpA" type="7005">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_gkzYFakvEeaDh53Sc91NpA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_gkzYFqkvEeaDh53Sc91NpA"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_gkyJ8akvEeaDh53Sc91NpA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_gkyJ8qkvEeaDh53Sc91NpA" fontName="Segoe UI"/>
+      <element xmi:type="ecore:EClass" href="http://test/petrinet#//Transition"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gkyJ86kvEeaDh53Sc91NpA" x="125" y="160"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_hUMNoKkvEeaDh53Sc91NpA" type="2006" element="_hULmkKkvEeaDh53Sc91NpA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_hUM0sKkvEeaDh53Sc91NpA" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_hUM0sakvEeaDh53Sc91NpA" type="7008">
+        <children xmi:type="notation:Node" xmi:id="_i71g4KkvEeaDh53Sc91NpA" type="3001" element="_i7zEoKkvEeaDh53Sc91NpA">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_i71g4akvEeaDh53Sc91NpA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_pqETcKkvEeaxjr3pdRtTUQ" type="3001" element="_plTvQKkvEeaxjr3pdRtTUQ">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_pqETcakvEeaxjr3pdRtTUQ"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_hUM0sqkvEeaDh53Sc91NpA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_hUM0s6kvEeaDh53Sc91NpA"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_hUM0tKkvEeaDh53Sc91NpA" type="7009">
+        <children xmi:type="notation:Node" xmi:id="_83IMUKl-Eeaxjr3pdRtTUQ" type="3007" element="_83Eh8Kl-Eeaxjr3pdRtTUQ">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_83IMUal-Eeaxjr3pdRtTUQ"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_hUM0takvEeaDh53Sc91NpA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_hUM0tqkvEeaDh53Sc91NpA"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_hUMNoakvEeaDh53Sc91NpA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_hUMNoqkvEeaDh53Sc91NpA" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hUMNo6kvEeaDh53Sc91NpA" x="310" y="140"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_ezo8cqkvEeaDh53Sc91NpA"/>
+    <edges xmi:type="notation:Edge" xmi:id="_iLIcsKkvEeaDh53Sc91NpA" type="4005" element="_iLH1oKkvEeaDh53Sc91NpA" source="_hUMNoKkvEeaDh53Sc91NpA" target="_gkyJ8KkvEeaDh53Sc91NpA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_iLJDwKkvEeaDh53Sc91NpA" type="6004">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iLJDwakvEeaDh53Sc91NpA" x="-6" y="13"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_iLIcsakvEeaDh53Sc91NpA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_iLIcsqkvEeaDh53Sc91NpA" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iLIcs6kvEeaDh53Sc91NpA" points="[-44, -4, 181, 4]$[-175, -4, 50, 4]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emfprofile="http://www.modelversioning.org/emfprofile/1.1" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <emfprofile:Profile xmi:id="_RfJnYKkKEeaPfO8gDOHfrg" name="inhibitorArcs" nsURI="http://test/petrinet/inhibitorArcs" nsPrefix="myprofile">
+    <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_ehYuoKkKEeaPfO8gDOHfrg" name="inhibitorArc">
+      <eSuperTypes xmi:type="ecore:EClass" href="http://www.modelversioning.org/emfprofile/application/1.1#//StereotypeApplication"/>
+      <eOperations xmi:type="emfprofile:Operation" xmi:id="_hZe9IKkKEeaPfO8gDOHfrg" name="isEnabled" body="&#x9;&#x9;Node node = eObject.getSource();&#xD;&#xA;&#x9;&#x9;if (node instanceof Place) {&#xD;&#xA;&#x9;&#x9;&#x9;if(((Place) node).getTokens().size() == 0)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return true;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return false;">
+        <joinpoint xmi:type="ecore:EOperation" href="http://test/petrinet#//Arc/isEnabled"/>
+      </eOperations>
+      <extensions xmi:type="emfprofile:Extension" xmi:id="_gM-GsKkKEeaPfO8gDOHfrg" constraints="weight = 0 and source.oclIsTypeOf(Place) and target.oclIsTypeOf(Transition)" upperBound="1">
+        <target xmi:type="ecore:EClass" href="http://test/petrinet#//Arc"/>
+      </extensions>
+    </eClassifiers>
+  </emfprofile:Profile>
+  <notation:Diagram xmi:id="_Rfm6YKkKEeaPfO8gDOHfrg" type="EMFProfile" element="_RfJnYKkKEeaPfO8gDOHfrg" name="profile.emfprofile_diagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_dznpsKkKEeaPfO8gDOHfrg" type="2002">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dzo31qkKEeaPfO8gDOHfrg" source="Shortcut">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dzo316kKEeaPfO8gDOHfrg" key="modelID" value="EMFProfile"/>
+      </eAnnotations>
+      <children xmi:type="notation:DecorationNode" xmi:id="_dzoQwKkKEeaPfO8gDOHfrg" type="5002"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_dzo30KkKEeaPfO8gDOHfrg" type="7004">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_dzo30akKEeaPfO8gDOHfrg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_dzo30qkKEeaPfO8gDOHfrg"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_dzo306kKEeaPfO8gDOHfrg" type="7005">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_dzo31KkKEeaPfO8gDOHfrg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_dzo31akKEeaPfO8gDOHfrg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_dznpsakKEeaPfO8gDOHfrg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_dznpsqkKEeaPfO8gDOHfrg" fontName="Segoe UI"/>
+      <element xmi:type="ecore:EClass" href="http://test/petrinet#//Arc"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dznps6kKEeaPfO8gDOHfrg" x="100" y="140"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ehZ8wKkKEeaPfO8gDOHfrg" type="2006" element="_ehYuoKkKEeaPfO8gDOHfrg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ehZ8xKkKEeaPfO8gDOHfrg" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_ehZ8xakKEeaPfO8gDOHfrg" type="7008">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ehZ8xqkKEeaPfO8gDOHfrg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ehZ8x6kKEeaPfO8gDOHfrg"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_ehZ8yKkKEeaPfO8gDOHfrg" type="7009">
+        <children xmi:type="notation:Node" xmi:id="_hZfkMKkKEeaPfO8gDOHfrg" type="3007" element="_hZe9IKkKEeaPfO8gDOHfrg">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_hZfkMakKEeaPfO8gDOHfrg"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ehZ8yakKEeaPfO8gDOHfrg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ehZ8yqkKEeaPfO8gDOHfrg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ehZ8wakKEeaPfO8gDOHfrg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ehZ8wqkKEeaPfO8gDOHfrg" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ehZ8w6kKEeaPfO8gDOHfrg" x="285" y="133"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Rfm6YakKEeaPfO8gDOHfrg"/>
+    <edges xmi:type="notation:Edge" xmi:id="_gM_U0KkKEeaPfO8gDOHfrg" type="4005" element="_gM-GsKkKEeaPfO8gDOHfrg" source="_ehZ8wKkKEeaPfO8gDOHfrg" target="_dznpsKkKEeaPfO8gDOHfrg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_gM_74KkKEeaPfO8gDOHfrg" type="6004">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gM_74akKEeaPfO8gDOHfrg" x="-10" y="13"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_gM_U0akKEeaPfO8gDOHfrg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_gM_U0qkKEeaPfO8gDOHfrg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gM_U06kKEeaPfO8gDOHfrg" points="[-44, -4, 163, 6]$[-201, 10, 6, 20]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
